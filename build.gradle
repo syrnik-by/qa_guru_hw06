@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.syrnik'
+version '1.0-SNAPSHOT'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation (
+            "com.codeborne:selenide:6.9.0",
+            "org.junit.jupiter:junit-jupiter:5.8.1"
+    )
+}
+
+test {
+    useJUnitPlatform()
+}
